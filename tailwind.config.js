@@ -2,7 +2,12 @@
 module.exports = {
   content: ["src/**/**/*.tsx"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['var(--font-inter)'],
+        mono: ['var(--font-roboto-mono)'],
+      }
+    },
   },
   plugins: [],
 }
