@@ -26,8 +26,6 @@ export const authOptions: AuthOptions = {
   ],
   callbacks: {
     async session({ session, user }) {
-      console.log("session", session)
-      console.log("user", user)
       return {
         ...session,
         user: {
@@ -37,8 +35,6 @@ export const authOptions: AuthOptions = {
       }
     },
     async signIn({ account, profile }: any) {
-      console.log("account", account)
-      console.log("profile", profile)
       if (account?.provider === "google") {
         return profile?.email_verified && profile?.email.endsWith("@gmail.com")
       }
